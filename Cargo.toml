@@ -1,5 +1,5 @@
 [package]
-name = "solana-nohash-hasher"
+name = "yzychain-nohash-hasher"
 version = "0.2.2"
 edition = "2021"
 authors = ["Solana Labs Maintainers <maintainers@solanalabs.com>"]
