@@ -23,7 +23,7 @@ use core::{
 /// See [`IsEnabled`] for use with custom types.
 ///
 /// ```
-/// use solana_nohash_hasher::IntMap;
+/// use yzychain_nohash_hasher::IntMap;
 ///
 /// let mut m: IntMap<u32, bool> = IntMap::default();
 ///
@@ -43,7 +43,7 @@ pub type IntMap<K, V> = std::collections::HashMap<K, V, BuildNoHashHasher<K>>;
 /// See [`IsEnabled`] for use with custom types.
 ///
 /// ```
-/// use solana_nohash_hasher::IntSet;
+/// use yzychain_nohash_hasher::IntSet;
 ///
 /// let mut m = IntSet::default();
 ///
@@ -63,7 +63,7 @@ pub type IntSet<T> = std::collections::HashSet<T, BuildNoHashHasher<T>>;
 /// See also [`IntMap`] and [`IntSet`] for some easier usage examples.
 ///
 /// ```
-/// use solana_nohash_hasher::BuildNoHashHasher;
+/// use yzychain_nohash_hasher::BuildNoHashHasher;
 /// use std::collections::HashMap;
 ///
 /// let mut m: HashMap::<u8, char, BuildNoHashHasher<u8>> =
@@ -95,7 +95,7 @@ pub type BuildNoHashHasher<T> = BuildHasherDefault<NoHashHasher<T>>;
 /// usage examples. See [`IsEnabled`] for use with custom types.
 ///
 /// ```
-/// use solana_nohash_hasher::NoHashHasher;
+/// use yzychain_nohash_hasher::NoHashHasher;
 /// use std::{collections::HashMap, hash::BuildHasherDefault};
 ///
 /// let mut m: HashMap::<u8, char, BuildHasherDefault<NoHashHasher<u8>>> =
@@ -179,9 +179,9 @@ impl<T> Copy for NoHashHasher<T> {}
 ///     }
 /// }
 ///
-/// impl solana_nohash_hasher::IsEnabled for SomeType {}
+/// impl yzychain_nohash_hasher::IsEnabled for SomeType {}
 ///
-/// let mut m = solana_nohash_hasher::IntMap::default();
+/// let mut m = yzychain_nohash_hasher::IntMap::default();
 ///
 /// m.insert(SomeType(1), 't');
 /// m.insert(SomeType(0), 'f');
